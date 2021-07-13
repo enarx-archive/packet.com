@@ -240,6 +240,11 @@ WantedBy=multi-user.target
 EOF
 ln -s /etc/systemd/system/gha@.service /etc/systemd/system/multi-user.target.wants/gha@enarx.service
 
+# Enable user lingering for user `gha`.
+# If enabled for a specific user, a user manager is spawned for the user at boot
+# and kept around after logouts.
+loginctl enable-linger gha
+
 # Extend the SELinux policy to use device nodes in containers
 TMPDIR=$(mktemp -d)
 push "$TMPDIR"
