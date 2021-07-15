@@ -132,6 +132,7 @@ import os
 
 hostnames = [
     "coffeelake.sgx.lab.enarx.dev",
+    "milan.sev.lab.enarx.dev",
     "rome.sev.lab.enarx.dev",
 ]
 
