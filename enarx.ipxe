@@ -3,6 +3,6 @@
 set base http://sjc.edge.kernel.org/fedora-buffet/fedora/linux/releases/34/Server/x86_64/os
 set ks https://raw.githubusercontent.com/enarx/packet.com/master/enarx.ks
 
-kernel ${base}/images/pxeboot/vmlinuz inst.stage2=${base}/ inst.ks=${ks} initrd=initrd.img console=ttyS1,115200 log_buf_len=2M
+kernel ${base}/images/pxeboot/vmlinuz inst.stage2=${base}/ inst.ks=${ks} initrd=initrd.img console=ttyS0,115200 console=ttyS1,115200 console=tty0 log_buf_len=2M
 initrd ${base}/images/pxeboot/initrd.img
 boot
