@@ -85,6 +85,7 @@ bash-completion
 cpuid
 
 podman
+toolbox
 strace
 git
 make
