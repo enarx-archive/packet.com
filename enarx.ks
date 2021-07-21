@@ -102,6 +102,7 @@ lynx
 emacs
 wget
 curl
+bind-utils
 
 gcc
 musl-gcc
