@@ -175,10 +175,9 @@ EOF
 echo 'KERNEL=="sev", MODE="0666"' > /etc/udev/rules.d/50-sev.rules
 
 # The udev rules provided by aesmd 92-sgx-provision.rules are incorrect
-# overwrite them and provida backwards compatible symlinks
 cat > /etc/udev/rules.d/99-sgx.rules <<EOF
-SUBSYSTEM=="misc", KERNEL=="sgx_provision", SYMLINK="sgx/provision", MODE="0660", GROUP="sgx_prv"
-SUBSYSTEM=="misc", KERNEL=="sgx_enclave", SYMLINK="sgx/enclave", MODE="0666"
+SUBSYSTEM=="misc", KERNEL=="sgx_provision", MODE="0660", GROUP="sgx_prv"
+SUBSYSTEM=="misc", KERNEL=="sgx_enclave", MODE="0666"
 EOF
 
 # aesmd wants a system group, but the scripts are doing it without `-r`
@@ -209,7 +208,7 @@ cat >/usr/local/bin/gha <<\EOF
 
 set -e
 
-[ -e /dev/sgx/enclave ] && dev="$dev -v /dev/sgx/enclave:/dev/sgx/enclave"
+[ -e /dev/sgx_enclave ] && dev="$dev -v /dev/sgx_enclave:/dev/sgx_enclave"
 [ -e /dev/sev ] && dev="$dev -v /dev/sev:/dev/sev"
 [ -e /dev/kvm ] && dev="$dev -v /dev/kvm:/dev/kvm"
 [ -e /dev/sev ] && [ -e /var/cache/amd-sev ] && dev="$dev -v /var/cache/amd-sev:/var/cache/amd-sev"
