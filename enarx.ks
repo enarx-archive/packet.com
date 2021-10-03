@@ -74,6 +74,9 @@ sshkey --username=puiterwijk "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEHCUh9mRefyyq
 user --name=rvolosatovs --lock --uid=1016 --gid=1016
 sshkey --username=rvolosatovs "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKEC3hGlw5tDKcfbvTd+IdZxGSdux1i/AIK3mzx4bZuX openpgp:0x8E53BF31"
 
+user --name=thaodt --lock --uid=1017 --gid=1017
+sshkey --username=thaodt "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKRc2Pc0xGkPIYw5V3HQbL7oOH9h37TQXex7l2pEGsfs aldineguyon@gmail.com"
+
 %packages
 @hardware-support
 @core
