@@ -74,6 +74,9 @@ sshkey --username=puiterwijk "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEHCUh9mRefyyq
 user --name=rvolosatovs --lock --uid=1016 --gid=1016
 sshkey --username=rvolosatovs "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKEC3hGlw5tDKcfbvTd+IdZxGSdux1i/AIK3mzx4bZuX openpgp:0x8E53BF31"
 
+user --name=nickvidal --lock --uid=1018 --gid=1018
+sshkey --username=nickvidal "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKsnN+9FZkj3btpDS1UNGeKQ0W3voWtHe5Kvyb9SymcN nick@profian.com"
+
 %packages
 @hardware-support
 @core
