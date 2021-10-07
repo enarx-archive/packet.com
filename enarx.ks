@@ -118,6 +118,9 @@ gdb
 
 openssl-devel
 
+wabt
+binaryen
+
 -dracut-config-generic
 -dracut-config-rescue
 -usb_modeswitch
