@@ -77,6 +77,9 @@ sshkey --username=rvolosatovs "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKEC3hGlw5tDK
 user --name=nickvidal --lock --uid=1018 --gid=1018
 sshkey --username=nickvidal "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKsnN+9FZkj3btpDS1UNGeKQ0W3voWtHe5Kvyb9SymcN nick@profian.com"
 
+user --name=shravi24 --lock --uid=1019 --gid=1019
+sshkey --username=shravi24 "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIDiY6vak0qwukR6/RjtjpCWw1LlmANT1Eq2Rpj7iLD6S shraddha.inamdar95@gmail.com"
+
 %packages
 @hardware-support
 @core
